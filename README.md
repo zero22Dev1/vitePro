@@ -1,5 +1,26 @@
 # calucatest
 
+```vbnet 
+
+Public Class MainForm
+    Public Sub New()
+        InitializeComponent()
+        Me.DoubleBuffered = True ' 再描画の安定
+    End Sub
+
+    Private Sub MainForm_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+        With Button1
+            .FlatStyle = FlatStyle.Flat
+            .UseVisualStyleBackColor = False
+            .BackColor = Color.LightBlue
+            .FlatAppearance.BorderSize = 0
+            .FlatAppearance.MouseOverBackColor = Color.LightBlue
+            .FlatAppearance.MouseDownBackColor = Color.LightBlue
+        End With
+    End Sub
+End Class
+
+```
 
 
 ```vbnet
